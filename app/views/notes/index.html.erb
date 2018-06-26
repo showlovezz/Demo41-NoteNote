@@ -1,0 +1,15 @@
+<h1>This is Note page.</h1>
+
+<% @notes.each do |note| %>
+	<ul>
+		<li>
+			<%= note.title %>
+			<%= note.content %>
+			<%= link_to "Show", note_path(note) %>
+			<%= link_to "Edit", edit_note_path(note) %>
+			<%= link_to "Delete", note_path(note), method: :delete, data: {confirm: "Are you sure?"} %>
+		</li>
+	</ul>
+<% end %>
+
+<%= link_to "New Note", new_note_path %>
