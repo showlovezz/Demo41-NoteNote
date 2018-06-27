@@ -1,0 +1,23 @@
+nav.navbar{
+	border-bottom: 5px solid $color_hover;
+	> .container{
+		> .navbar-brand{
+			> i{
+				color: $color_hover;
+				margin-right: 10px;
+			}
+		}
+		> .collapse{
+			> ul{
+				> li{
+					> .nav-link{
+						color: $color_text;
+					}
+					> .nav-link:hover{
+						color: $color_hover;
+					}
+				}
+			}
+		}
+	}
+}
