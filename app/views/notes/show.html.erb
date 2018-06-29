@@ -1,9 +1,24 @@
-<h1>Show page</h1>
+<section id="section_note_show">
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-8 offset-2">
+				
+				<div class="card">
+				  <div class="card-header"><h4><%= @note.title %></h4></div>
+				  <ul class="list-group list-group-flush">
+				    <li class="list-group-item"><%= simple_format(@note.content) %></li>
+				    <% if user_signed_in? %>
+					    <li class="list-group-item">
+					    	<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+					    		<%= link_to "Edit", edit_note_path, class: "btn btn-secondary" %>
+					    		<%= link_to "Delete", note_path(@note), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-secondary" %>
+								</div>
+					    </li>
+				    <% end %>
+				  </ul>
+				</div>
 
-<%= @note.title %>
-
-<%= @note.content %>
-
-<%= link_to "Back", notes_path %>
-
-<%= link_to "Delete", note_path(@note), method: :delete, data: {confirm: "Are you sure?"} %>
+			</div>
+		</div>
+	</div>
+</section>

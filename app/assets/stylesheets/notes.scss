@@ -23,6 +23,12 @@
 .add_note{
 	background-color: #404040;
 	padding: 15px;
-	color: #fff;
+	color: $color_text;
 	border-radius: 10px;
+}
+
+.card-header{
+	> h4{
+		margin-bottom: 0;
+	}
 }

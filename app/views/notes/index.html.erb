@@ -20,7 +20,11 @@
 					<div class="add_note text-center">
 						<h2>Add a Note</h2>
 						<p>It appears you haven't created any notes yet... Lets fix that. Why don't you go ahead and create a new note.</p>
-						<%= link_to "New Note", new_note_path, class: "btn btn-outline-warning btn-lg" %>
+						<% if user_signed_in? %>
+							<%= link_to "New Note", new_note_path, class: "btn btn-outline-warning btn-lg" %>
+						<% else %>
+							<%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-success btn-lg" %>
+						<% end %>
 					</div>
 				</div>
 			<% end %>
