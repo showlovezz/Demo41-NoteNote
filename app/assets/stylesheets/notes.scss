@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-	background-color: #F8F8FF;
+	background-color: $color_body;
 }
 
 #section_note_index{
@@ -34,5 +34,45 @@ body{
 .card-header{
 	> h4{
 		margin-bottom: 0;
+	}
+}
+
+#section_sign_up{
+	> .container{
+		> .row{
+			> .col-4{
+				background-color: $color_text;
+				padding: 15px;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+.form-control{
+	background-color: $color_body;
+}
+
+#section_log_in{
+	> .container{
+		> .row{
+			> .col-4{
+				background-color:$color_text;
+				padding: 15px;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+#section_note_form{
+	> .container{
+		> .row{
+			> .col-8{
+				background-color: $color_text;
+				padding: 15px;
+				border-radius: 5px;
+			}
+		}
 	}
 }
