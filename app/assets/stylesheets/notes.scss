@@ -1,3 +1,28 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#section_note_index{
+	> .container{
+		> .row{
+			> .col-4{
+				> .card{
+					height: 200px;
+					background-color: $color_bg;
+					color: $color_text;
+				}
+				> .card:hover{
+					color: $color_hover;
+					box-shadow: 0 0 3px 3px $color_hover;
+				}
+			}
+		}
+	}
+}
+
+.add_note{
+	background-color: #404040;
+	padding: 15px;
+	color: #fff;
+	border-radius: 10px;
+}

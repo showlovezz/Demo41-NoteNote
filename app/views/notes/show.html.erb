@@ -5,3 +5,5 @@
 <%= @note.content %>
 
 <%= link_to "Back", notes_path %>
+
+<%= link_to "Delete", note_path(@note), method: :delete, data: {confirm: "Are you sure?"} %>
